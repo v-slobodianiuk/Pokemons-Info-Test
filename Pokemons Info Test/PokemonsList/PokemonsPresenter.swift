@@ -124,7 +124,7 @@ class PokemonsPresenter: PokemonsPresenterProtocol {
     }
     
     func getPokemonInfo() {
-        guard let pokemonsList = pokemons?.results else { fatalError("Nil") }
+        guard let pokemonsList = pokemons?.results else { return }
         for pokemon in pokemonsList {
             myGroup.enter()
             if let url = URL(string: pokemon.url) {

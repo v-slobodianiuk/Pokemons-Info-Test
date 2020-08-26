@@ -123,10 +123,7 @@ extension PokemonsViewController: PokemonsViewProtocol {
             self.activityIndicator.stopAnimating()
             let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
             
-            let alertAction = UIAlertAction(title: "OK", style: .cancel) { [weak self] _ in
-                self?.searchController.searchBar.becomeFirstResponder()
-            }
-            
+            let alertAction = UIAlertAction(title: "OK", style: .cancel)
             alertController.addAction(alertAction)
             self.present(alertController, animated: true, completion: nil)
         }
